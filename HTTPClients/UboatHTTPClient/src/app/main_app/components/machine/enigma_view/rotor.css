@@ -1,0 +1,6 @@
+.enigma_element{
+    -fx-border-color: black;
+    -fx-border-radius: 5px;
+    -fx-background-color: lightgray;
+    -fx-background-radius: 5px;
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<VBox id="main" alignment="CENTER" prefHeight="300.0" prefWidth="400.0" spacing="20.0" stylesheets="@login.css" xmlns="http://javafx.com/javafx/8.0.331" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.login.UboatLoginController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="U-Boat">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Text>
+      <TextField fx:id="UsernameTextField" onAction="#signInButton" promptText="User name " />
+      <Button fx:id="signInButton" mnemonicParsing="false" onAction="#signInButton" text="Sign in" />
+      <Label fx:id="errorMessageLabel" />
+   </children>
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+</VBox>

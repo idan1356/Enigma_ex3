@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HTTPClients/AgentHTTPClient/AgentHTTPClient.iml" filepath="$PROJECT_DIR$/HTTPClients/AgentHTTPClient/AgentHTTPClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HTTPClients/AllyHTTPClient/AllyHTTPClient.iml" filepath="$PROJECT_DIR$/HTTPClients/AllyHTTPClient/AllyHTTPClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Enigma_EXC1/DTO/DTO.iml" filepath="$PROJECT_DIR$/../Enigma_EXC1/DTO/DTO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EnigmaLogicEngine/EnigmaLogicEngine.iml" filepath="$PROJECT_DIR$/EnigmaLogicEngine/EnigmaLogicEngine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EnigmaWebApp/EnigmaWebApp.iml" filepath="$PROJECT_DIR$/EnigmaWebApp/EnigmaWebApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Enigma_EXC3_new.iml" filepath="$PROJECT_DIR$/Enigma_EXC3_new.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HTTPClients/HTTPClients.iml" filepath="$PROJECT_DIR$/HTTPClients/HTTPClients.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HTTPClients/UboatHTTPClient/UboatHTTPClient.iml" filepath="$PROJECT_DIR$/HTTPClients/UboatHTTPClient/UboatHTTPClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Enigma_EXC1/engine/engine.iml" filepath="$PROJECT_DIR$/../Enigma_EXC1/engine/engine.iml" />
+    </modules>
+  </component>
+</project>

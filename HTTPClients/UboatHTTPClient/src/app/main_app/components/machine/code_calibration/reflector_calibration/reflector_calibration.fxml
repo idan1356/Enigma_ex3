@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="reflectorCalibrationComponent" alignment="TOP_CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.331" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.main_app.components.machine.code_calibration.reflector_calibration.ReflectorCalibrationController">
+   <children>
+      <Label text="Select Reflector">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="reflectorSelectButton" prefHeight="25.0" prefWidth="150.0" promptText="Select Reflector" />
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

@@ -1,0 +1,505 @@
+28-Sep-2022 16:37:13.829 SEVERE [main] org.apache.catalina.startup.Catalina.stopServer Could not contact [localhost:8005] (base port [8005] and offset [0]). Tomcat may not be running.
+28-Sep-2022 16:37:13.834 SEVERE [main] org.apache.catalina.startup.Catalina.stopServer Error stopping Catalina
+	java.net.ConnectException: Connection refused: connect
+		at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+		at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+		at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+		at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+		at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+		at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+		at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+		at java.net.Socket.connect(Socket.java:606)
+		at java.net.Socket.connect(Socket.java:555)
+		at java.net.Socket.<init>(Socket.java:451)
+		at java.net.Socket.<init>(Socket.java:228)
+		at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:692)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:391)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:481)
+28-Sep-2022 16:38:41.457 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.26
+28-Sep-2022 16:38:41.459 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 23 2022 10:25:44 UTC
+28-Sep-2022 16:38:41.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.26.0
+28-Sep-2022 16:38:41.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+28-Sep-2022 16:38:41.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+28-Sep-2022 16:38:41.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+28-Sep-2022 16:38:41.461 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_333\jre
+28-Sep-2022 16:38:41.461 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_333-b02
+28-Sep-2022 16:38:41.461 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Sep-2022 16:38:41.461 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 16:38:41.461 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 16:38:41.462 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\conf\logging.properties
+28-Sep-2022 16:38:41.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Sep-2022 16:38:41.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Sep-2022 16:38:41.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Sep-2022 16:38:41.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Sep-2022 16:38:41.463 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 16:38:41.464 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 16:38:41.464 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\temp
+28-Sep-2022 16:38:41.471 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_333\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\idan1\AppData\Local\Microsoft\WindowsApps;C:\Users\idan1\AppData\Local\GitHubDesktop\bin;C:\Users\idan1\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm 2022.1.3\bin;C:\Program Files\heroku\bin;C:\Program Files\PostgreSQL\14\lib;C:\Program Files\PostgreSQL\14\bin;C:\Program Files\Java\jdk1.8.0_333\bin;.]
+28-Sep-2022 16:38:41.857 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 16:38:41.878 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [559] milliseconds
+28-Sep-2022 16:38:41.922 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Sep-2022 16:38:41.922 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.26]
+28-Sep-2022 16:38:41.932 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs]
+28-Sep-2022 16:38:42.241 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [103] milliseconds.
+28-Sep-2022 16:38:42.266 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs] has finished in [334] ms
+28-Sep-2022 16:38:42.266 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples]
+28-Sep-2022 16:38:42.635 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples] has finished in [369] ms
+28-Sep-2022 16:38:42.635 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager]
+28-Sep-2022 16:38:42.671 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager] has finished in [36] ms
+28-Sep-2022 16:38:42.671 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager]
+28-Sep-2022 16:38:42.699 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager] has finished in [28] ms
+28-Sep-2022 16:38:42.700 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT]
+28-Sep-2022 16:38:42.726 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT] has finished in [27] ms
+28-Sep-2022 16:38:42.729 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 16:38:42.748 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [870] milliseconds
+28-Sep-2022 16:49:19.197 SEVERE [main] org.apache.catalina.startup.Catalina.stopServer Could not contact [localhost:8005] (base port [8005] and offset [0]). Tomcat may not be running.
+28-Sep-2022 16:49:19.200 SEVERE [main] org.apache.catalina.startup.Catalina.stopServer Error stopping Catalina
+	java.net.ConnectException: Connection refused: connect
+		at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+		at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+		at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+		at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+		at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+		at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+		at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+		at java.net.Socket.connect(Socket.java:606)
+		at java.net.Socket.connect(Socket.java:555)
+		at java.net.Socket.<init>(Socket.java:451)
+		at java.net.Socket.<init>(Socket.java:228)
+		at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:692)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:391)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:481)
+28-Sep-2022 16:50:05.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.26
+28-Sep-2022 16:50:05.978 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 23 2022 10:25:44 UTC
+28-Sep-2022 16:50:05.978 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.26.0
+28-Sep-2022 16:50:05.979 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+28-Sep-2022 16:50:05.979 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+28-Sep-2022 16:50:05.980 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+28-Sep-2022 16:50:05.980 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_333\jre
+28-Sep-2022 16:50:05.980 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_333-b02
+28-Sep-2022 16:50:05.980 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Sep-2022 16:50:05.980 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 16:50:05.980 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 16:50:05.980 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\conf\logging.properties
+28-Sep-2022 16:50:05.980 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Sep-2022 16:50:05.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Sep-2022 16:50:05.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Sep-2022 16:50:05.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Sep-2022 16:50:05.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 16:50:05.984 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 16:50:05.984 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\temp
+28-Sep-2022 16:50:05.989 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_333\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\idan1\AppData\Local\Microsoft\WindowsApps;C:\Users\idan1\AppData\Local\GitHubDesktop\bin;C:\Users\idan1\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm 2022.1.3\bin;C:\Program Files\heroku\bin;C:\Program Files\PostgreSQL\14\lib;C:\Program Files\PostgreSQL\14\bin;C:\Program Files\Java\jdk1.8.0_333\bin;.]
+28-Sep-2022 16:50:06.269 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 16:50:06.286 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [450] milliseconds
+28-Sep-2022 16:50:06.321 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Sep-2022 16:50:06.321 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.26]
+28-Sep-2022 16:50:06.331 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs]
+28-Sep-2022 16:50:06.607 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs] has finished in [276] ms
+28-Sep-2022 16:50:06.608 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples]
+28-Sep-2022 16:50:06.941 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples] has finished in [333] ms
+28-Sep-2022 16:50:06.941 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager]
+28-Sep-2022 16:50:06.972 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager] has finished in [31] ms
+28-Sep-2022 16:50:06.972 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager]
+28-Sep-2022 16:50:06.999 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager] has finished in [27] ms
+28-Sep-2022 16:50:07.000 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT]
+28-Sep-2022 16:50:07.025 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT] has finished in [25] ms
+28-Sep-2022 16:50:07.029 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 16:50:07.045 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [758] milliseconds
+28-Sep-2022 17:34:33.929 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+28-Sep-2022 17:34:33.929 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 17:34:34.040 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+28-Sep-2022 17:34:34.068 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 17:34:34.073 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 17:34:42.574 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.26
+28-Sep-2022 17:34:42.576 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 23 2022 10:25:44 UTC
+28-Sep-2022 17:34:42.577 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.26.0
+28-Sep-2022 17:34:42.577 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+28-Sep-2022 17:34:42.577 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+28-Sep-2022 17:34:42.577 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+28-Sep-2022 17:34:42.577 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_333\jre
+28-Sep-2022 17:34:42.577 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_333-b02
+28-Sep-2022 17:34:42.577 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Sep-2022 17:34:42.577 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 17:34:42.578 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 17:34:42.578 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\conf\logging.properties
+28-Sep-2022 17:34:42.578 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Sep-2022 17:34:42.578 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Sep-2022 17:34:42.578 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Sep-2022 17:34:42.579 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Sep-2022 17:34:42.579 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 17:34:42.581 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 17:34:42.581 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\temp
+28-Sep-2022 17:34:42.586 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_333\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\idan1\AppData\Local\Microsoft\WindowsApps;C:\Users\idan1\AppData\Local\GitHubDesktop\bin;C:\Users\idan1\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm 2022.1.3\bin;C:\Program Files\heroku\bin;C:\Program Files\PostgreSQL\14\lib;C:\Program Files\PostgreSQL\14\bin;C:\Program Files\Java\jdk1.8.0_333\bin;.]
+28-Sep-2022 17:34:42.857 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 17:34:42.875 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [434] milliseconds
+28-Sep-2022 17:34:42.914 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Sep-2022 17:34:42.914 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.26]
+28-Sep-2022 17:34:42.922 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs]
+28-Sep-2022 17:34:43.190 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs] has finished in [268] ms
+28-Sep-2022 17:34:43.191 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples]
+28-Sep-2022 17:34:43.513 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples] has finished in [321] ms
+28-Sep-2022 17:34:43.513 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager]
+28-Sep-2022 17:34:43.548 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager] has finished in [35] ms
+28-Sep-2022 17:34:43.548 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager]
+28-Sep-2022 17:34:43.578 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager] has finished in [30] ms
+28-Sep-2022 17:34:43.579 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT]
+28-Sep-2022 17:34:43.602 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT] has finished in [23] ms
+28-Sep-2022 17:34:43.606 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 17:34:43.617 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [742] milliseconds
+28-Sep-2022 17:35:29.357 WARNING [main] org.apache.catalina.core.StandardServer.await Invalid shutdown command [] received
+28-Sep-2022 17:35:48.610 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+28-Sep-2022 17:35:48.611 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 17:35:48.721 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+28-Sep-2022 17:35:48.740 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 17:35:48.750 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 17:37:52.416 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.26
+28-Sep-2022 17:37:52.418 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 23 2022 10:25:44 UTC
+28-Sep-2022 17:37:52.418 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.26.0
+28-Sep-2022 17:37:52.419 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+28-Sep-2022 17:37:52.419 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+28-Sep-2022 17:37:52.419 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+28-Sep-2022 17:37:52.419 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_333\jre
+28-Sep-2022 17:37:52.419 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_333-b02
+28-Sep-2022 17:37:52.419 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Sep-2022 17:37:52.419 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 17:37:52.420 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 17:37:52.420 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\conf\logging.properties
+28-Sep-2022 17:37:52.420 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Sep-2022 17:37:52.420 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Sep-2022 17:37:52.420 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Sep-2022 17:37:52.420 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Sep-2022 17:37:52.421 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 17:37:52.421 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 17:37:52.422 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\temp
+28-Sep-2022 17:37:52.427 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_333\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\idan1\AppData\Local\Microsoft\WindowsApps;C:\Users\idan1\AppData\Local\GitHubDesktop\bin;C:\Users\idan1\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm 2022.1.3\bin;C:\Program Files\heroku\bin;C:\Program Files\PostgreSQL\14\lib;C:\Program Files\PostgreSQL\14\bin;C:\Program Files\Java\jdk1.8.0_333\bin;.]
+28-Sep-2022 17:37:52.701 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 17:37:52.717 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [432] milliseconds
+28-Sep-2022 17:37:52.745 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Sep-2022 17:37:52.745 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.26]
+28-Sep-2022 17:37:52.753 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs]
+28-Sep-2022 17:37:53.025 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs] has finished in [272] ms
+28-Sep-2022 17:37:53.026 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples]
+28-Sep-2022 17:37:53.342 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples] has finished in [316] ms
+28-Sep-2022 17:37:53.342 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager]
+28-Sep-2022 17:37:53.373 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager] has finished in [31] ms
+28-Sep-2022 17:37:53.373 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager]
+28-Sep-2022 17:37:53.398 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager] has finished in [25] ms
+28-Sep-2022 17:37:53.398 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT]
+28-Sep-2022 17:37:53.418 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT] has finished in [19] ms
+28-Sep-2022 17:37:53.420 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 17:37:53.434 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [716] milliseconds
+28-Sep-2022 17:48:14.241 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\Enigma_Web exploded.war]
+28-Sep-2022 17:48:14.356 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\Enigma_Web exploded.war] has finished in [115] ms
+28-Sep-2022 17:51:44.065 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.26
+28-Sep-2022 17:51:44.067 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 23 2022 10:25:44 UTC
+28-Sep-2022 17:51:44.068 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.26.0
+28-Sep-2022 17:51:44.068 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+28-Sep-2022 17:51:44.068 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+28-Sep-2022 17:51:44.068 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+28-Sep-2022 17:51:44.068 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_333\jre
+28-Sep-2022 17:51:44.068 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_333-b02
+28-Sep-2022 17:51:44.068 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Sep-2022 17:51:44.069 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 17:51:44.069 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 17:51:44.070 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\conf\logging.properties
+28-Sep-2022 17:51:44.070 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Sep-2022 17:51:44.070 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Sep-2022 17:51:44.070 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Sep-2022 17:51:44.070 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Sep-2022 17:51:44.070 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 17:51:44.070 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 17:51:44.071 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\temp
+28-Sep-2022 17:51:44.077 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_333\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\idan1\AppData\Local\Microsoft\WindowsApps;C:\Users\idan1\AppData\Local\GitHubDesktop\bin;C:\Users\idan1\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm 2022.1.3\bin;C:\Program Files\heroku\bin;C:\Program Files\PostgreSQL\14\lib;C:\Program Files\PostgreSQL\14\bin;C:\Program Files\Java\jdk1.8.0_333\bin;.]
+28-Sep-2022 17:51:44.343 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 17:51:44.360 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [430] milliseconds
+28-Sep-2022 17:51:44.399 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Sep-2022 17:51:44.399 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.26]
+28-Sep-2022 17:51:44.416 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\Enigma_Web exploded.war]
+28-Sep-2022 17:51:44.709 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\Enigma_Web exploded.war] has finished in [292] ms
+28-Sep-2022 17:51:44.710 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs]
+28-Sep-2022 17:51:44.740 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs] has finished in [30] ms
+28-Sep-2022 17:51:44.741 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples]
+28-Sep-2022 17:51:45.046 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples] has finished in [305] ms
+28-Sep-2022 17:51:45.047 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager]
+28-Sep-2022 17:51:45.084 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager] has finished in [37] ms
+28-Sep-2022 17:51:45.085 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager]
+28-Sep-2022 17:51:45.113 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager] has finished in [28] ms
+28-Sep-2022 17:51:45.114 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT]
+28-Sep-2022 17:51:45.134 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT] has finished in [20] ms
+28-Sep-2022 17:51:45.137 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 17:51:45.149 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [787] milliseconds
+28-Sep-2022 17:55:45.557 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\enigma]
+28-Sep-2022 17:55:45.589 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\enigma] has finished in [32] ms
+28-Sep-2022 17:55:56.118 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Enigma_Web exploded]
+28-Sep-2022 17:57:13.525 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.26
+28-Sep-2022 17:57:13.527 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 23 2022 10:25:44 UTC
+28-Sep-2022 17:57:13.528 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.26.0
+28-Sep-2022 17:57:13.528 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+28-Sep-2022 17:57:13.528 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+28-Sep-2022 17:57:13.528 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+28-Sep-2022 17:57:13.528 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_333\jre
+28-Sep-2022 17:57:13.528 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_333-b02
+28-Sep-2022 17:57:13.528 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Sep-2022 17:57:13.528 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 17:57:13.528 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 17:57:13.529 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\conf\logging.properties
+28-Sep-2022 17:57:13.529 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Sep-2022 17:57:13.530 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Sep-2022 17:57:13.530 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Sep-2022 17:57:13.530 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Sep-2022 17:57:13.530 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 17:57:13.531 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 17:57:13.531 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\temp
+28-Sep-2022 17:57:13.536 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_333\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\idan1\AppData\Local\Microsoft\WindowsApps;C:\Users\idan1\AppData\Local\GitHubDesktop\bin;C:\Users\idan1\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm 2022.1.3\bin;C:\Program Files\heroku\bin;C:\Program Files\PostgreSQL\14\lib;C:\Program Files\PostgreSQL\14\bin;C:\Program Files\Java\jdk1.8.0_333\bin;.]
+28-Sep-2022 17:57:13.798 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 17:57:13.815 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [415] milliseconds
+28-Sep-2022 17:57:13.847 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Sep-2022 17:57:13.847 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.26]
+28-Sep-2022 17:57:13.856 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs]
+28-Sep-2022 17:57:14.128 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs] has finished in [272] ms
+28-Sep-2022 17:57:14.128 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\enigma]
+28-Sep-2022 17:57:14.160 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\enigma] has finished in [32] ms
+28-Sep-2022 17:57:14.160 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples]
+28-Sep-2022 17:57:14.473 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples] has finished in [313] ms
+28-Sep-2022 17:57:14.473 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager]
+28-Sep-2022 17:57:14.508 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager] has finished in [35] ms
+28-Sep-2022 17:57:14.508 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager]
+28-Sep-2022 17:57:14.534 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager] has finished in [26] ms
+28-Sep-2022 17:57:14.534 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT]
+28-Sep-2022 17:57:14.559 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT] has finished in [25] ms
+28-Sep-2022 17:57:14.563 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 17:57:14.579 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [763] milliseconds
+28-Sep-2022 17:59:35.274 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/enigma]
+28-Sep-2022 17:59:35.292 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\Enigma_Web exploded.war]
+28-Sep-2022 17:59:35.349 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\Enigma_Web exploded.war] has finished in [57] ms
+28-Sep-2022 18:01:26.023 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Enigma_Web exploded]
+28-Sep-2022 18:05:06.397 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\Enigma.war]
+28-Sep-2022 18:05:06.471 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\Enigma.war] has finished in [73] ms
+28-Sep-2022 18:05:49.715 SEVERE [main] org.apache.catalina.startup.Catalina.stopServer Could not contact [localhost:8005] (base port [8005] and offset [0]). Tomcat may not be running.
+28-Sep-2022 18:05:49.718 SEVERE [main] org.apache.catalina.startup.Catalina.stopServer Error stopping Catalina
+	java.net.ConnectException: Connection refused: connect
+		at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+		at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+		at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+		at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+		at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+		at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+		at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+		at java.net.Socket.connect(Socket.java:606)
+		at java.net.Socket.connect(Socket.java:555)
+		at java.net.Socket.<init>(Socket.java:451)
+		at java.net.Socket.<init>(Socket.java:228)
+		at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:692)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:391)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:481)
+28-Sep-2022 18:05:53.671 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.26
+28-Sep-2022 18:05:53.674 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 23 2022 10:25:44 UTC
+28-Sep-2022 18:05:53.674 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.26.0
+28-Sep-2022 18:05:53.674 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+28-Sep-2022 18:05:53.675 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+28-Sep-2022 18:05:53.675 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+28-Sep-2022 18:05:53.675 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_333\jre
+28-Sep-2022 18:05:53.675 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_333-b02
+28-Sep-2022 18:05:53.675 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Sep-2022 18:05:53.676 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 18:05:53.676 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 18:05:53.676 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\conf\logging.properties
+28-Sep-2022 18:05:53.676 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Sep-2022 18:05:53.677 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Sep-2022 18:05:53.677 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Sep-2022 18:05:53.677 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Sep-2022 18:05:53.677 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 18:05:53.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 18:05:53.678 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\temp
+28-Sep-2022 18:05:53.688 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_333\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\idan1\AppData\Local\Microsoft\WindowsApps;C:\Users\idan1\AppData\Local\GitHubDesktop\bin;C:\Users\idan1\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm 2022.1.3\bin;C:\Program Files\heroku\bin;C:\Program Files\PostgreSQL\14\lib;C:\Program Files\PostgreSQL\14\bin;C:\Program Files\Java\jdk1.8.0_333\bin;.]
+28-Sep-2022 18:05:53.958 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 18:05:53.978 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [439] milliseconds
+28-Sep-2022 18:05:54.007 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Sep-2022 18:05:54.007 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.26]
+28-Sep-2022 18:05:54.023 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\Enigma.war]
+28-Sep-2022 18:05:54.313 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\Enigma.war] has finished in [289] ms
+28-Sep-2022 18:05:54.314 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs]
+28-Sep-2022 18:05:54.336 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs] has finished in [22] ms
+28-Sep-2022 18:05:54.336 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples]
+28-Sep-2022 18:05:54.642 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples] has finished in [306] ms
+28-Sep-2022 18:05:54.642 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager]
+28-Sep-2022 18:05:54.674 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager] has finished in [32] ms
+28-Sep-2022 18:05:54.675 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager]
+28-Sep-2022 18:05:54.702 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager] has finished in [27] ms
+28-Sep-2022 18:05:54.703 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT]
+28-Sep-2022 18:05:54.725 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT] has finished in [22] ms
+28-Sep-2022 18:05:54.729 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 18:05:54.740 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [761] milliseconds
+28-Sep-2022 18:07:28.139 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+28-Sep-2022 18:07:28.139 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 18:07:28.223 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+28-Sep-2022 18:07:28.246 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 18:07:28.254 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 18:12:10.859 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.26
+28-Sep-2022 18:12:10.861 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 23 2022 10:25:44 UTC
+28-Sep-2022 18:12:10.862 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.26.0
+28-Sep-2022 18:12:10.862 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+28-Sep-2022 18:12:10.862 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+28-Sep-2022 18:12:10.862 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+28-Sep-2022 18:12:10.862 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_333\jre
+28-Sep-2022 18:12:10.862 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_333-b02
+28-Sep-2022 18:12:10.862 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Sep-2022 18:12:10.863 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 18:12:10.863 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 18:12:10.863 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\conf\logging.properties
+28-Sep-2022 18:12:10.863 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Sep-2022 18:12:10.863 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Sep-2022 18:12:10.863 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Sep-2022 18:12:10.863 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Sep-2022 18:12:10.864 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 18:12:10.865 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 18:12:10.865 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\temp
+28-Sep-2022 18:12:10.871 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_333\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\idan1\AppData\Local\Microsoft\WindowsApps;C:\Users\idan1\AppData\Local\GitHubDesktop\bin;C:\Users\idan1\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm 2022.1.3\bin;C:\Program Files\heroku\bin;C:\Program Files\PostgreSQL\14\lib;C:\Program Files\PostgreSQL\14\bin;C:\Program Files\Java\jdk1.8.0_333\bin;.]
+28-Sep-2022 18:12:11.139 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 18:12:11.157 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [427] milliseconds
+28-Sep-2022 18:12:11.189 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Sep-2022 18:12:11.189 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.26]
+28-Sep-2022 18:12:11.204 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\Enigma.war]
+28-Sep-2022 18:12:11.503 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\Enigma.war] has finished in [298] ms
+28-Sep-2022 18:12:11.504 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs]
+28-Sep-2022 18:12:11.530 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs] has finished in [25] ms
+28-Sep-2022 18:12:11.530 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples]
+28-Sep-2022 18:12:11.844 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples] has finished in [314] ms
+28-Sep-2022 18:12:11.844 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager]
+28-Sep-2022 18:12:11.881 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager] has finished in [37] ms
+28-Sep-2022 18:12:11.881 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager]
+28-Sep-2022 18:12:11.908 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager] has finished in [27] ms
+28-Sep-2022 18:12:11.908 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT]
+28-Sep-2022 18:12:11.929 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT] has finished in [21] ms
+28-Sep-2022 18:12:11.933 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 18:12:11.948 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [790] milliseconds
+28-Sep-2022 18:19:33.086 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Enigma]
+28-Sep-2022 18:24:43.523 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\Enigma]
+28-Sep-2022 18:24:43.559 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\Enigma] has finished in [36] ms
+28-Sep-2022 18:25:13.065 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+28-Sep-2022 18:25:13.066 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 18:25:13.167 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+28-Sep-2022 18:25:13.188 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 18:25:13.192 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 18:25:35.717 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.26
+28-Sep-2022 18:25:35.720 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 23 2022 10:25:44 UTC
+28-Sep-2022 18:25:35.720 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.26.0
+28-Sep-2022 18:25:35.720 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+28-Sep-2022 18:25:35.720 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+28-Sep-2022 18:25:35.720 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+28-Sep-2022 18:25:35.720 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_333\jre
+28-Sep-2022 18:25:35.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_333-b02
+28-Sep-2022 18:25:35.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Sep-2022 18:25:35.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 18:25:35.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 18:25:35.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\conf\logging.properties
+28-Sep-2022 18:25:35.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Sep-2022 18:25:35.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Sep-2022 18:25:35.723 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Sep-2022 18:25:35.723 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Sep-2022 18:25:35.723 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 18:25:35.724 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 18:25:35.724 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\temp
+28-Sep-2022 18:25:35.730 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_333\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\idan1\AppData\Local\Microsoft\WindowsApps;C:\Users\idan1\AppData\Local\GitHubDesktop\bin;C:\Users\idan1\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm 2022.1.3\bin;C:\Program Files\heroku\bin;C:\Program Files\PostgreSQL\14\lib;C:\Program Files\PostgreSQL\14\bin;C:\Program Files\Java\jdk1.8.0_333\bin;.]
+28-Sep-2022 18:25:35.991 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 18:25:36.019 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [422] milliseconds
+28-Sep-2022 18:25:36.049 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Sep-2022 18:25:36.049 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.26]
+28-Sep-2022 18:25:36.059 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs]
+28-Sep-2022 18:25:36.316 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [102] milliseconds.
+28-Sep-2022 18:25:36.333 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs] has finished in [274] ms
+28-Sep-2022 18:25:36.334 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\Enigma]
+28-Sep-2022 18:25:36.364 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\Enigma] has finished in [30] ms
+28-Sep-2022 18:25:36.364 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples]
+28-Sep-2022 18:25:36.657 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples] has finished in [293] ms
+28-Sep-2022 18:25:36.658 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager]
+28-Sep-2022 18:25:36.684 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager] has finished in [26] ms
+28-Sep-2022 18:25:36.684 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager]
+28-Sep-2022 18:25:36.715 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager] has finished in [31] ms
+28-Sep-2022 18:25:36.715 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT]
+28-Sep-2022 18:25:36.742 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT] has finished in [27] ms
+28-Sep-2022 18:25:36.745 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 18:25:36.765 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [744] milliseconds
+28-Sep-2022 18:28:19.133 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+28-Sep-2022 18:28:19.134 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 18:28:19.285 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+28-Sep-2022 18:28:19.311 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 18:28:19.325 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 18:53:57.621 SEVERE [main] org.apache.catalina.startup.Catalina.stopServer Could not contact [localhost:8005] (base port [8005] and offset [0]). Tomcat may not be running.
+28-Sep-2022 18:53:57.624 SEVERE [main] org.apache.catalina.startup.Catalina.stopServer Error stopping Catalina
+	java.net.ConnectException: Connection refused: connect
+		at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+		at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+		at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+		at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+		at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+		at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+		at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+		at java.net.Socket.connect(Socket.java:606)
+		at java.net.Socket.connect(Socket.java:555)
+		at java.net.Socket.<init>(Socket.java:451)
+		at java.net.Socket.<init>(Socket.java:228)
+		at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:692)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:391)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:481)
+28-Sep-2022 22:09:23.603 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.26
+28-Sep-2022 22:09:23.604 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 23 2022 10:25:44 UTC
+28-Sep-2022 22:09:23.605 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.26.0
+28-Sep-2022 22:09:23.605 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+28-Sep-2022 22:09:23.605 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+28-Sep-2022 22:09:23.605 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+28-Sep-2022 22:09:23.606 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_333\jre
+28-Sep-2022 22:09:23.606 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_333-b02
+28-Sep-2022 22:09:23.606 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Sep-2022 22:09:23.606 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 22:09:23.606 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 22:09:23.607 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\conf\logging.properties
+28-Sep-2022 22:09:23.607 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Sep-2022 22:09:23.607 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Sep-2022 22:09:23.607 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Sep-2022 22:09:23.607 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Sep-2022 22:09:23.607 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 22:09:23.609 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26
+28-Sep-2022 22:09:23.609 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\temp
+28-Sep-2022 22:09:23.614 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_333\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\idan1\AppData\Local\Microsoft\WindowsApps;C:\Users\idan1\AppData\Local\GitHubDesktop\bin;C:\Users\idan1\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm 2022.1.3\bin;C:\Program Files\heroku\bin;C:\Program Files\PostgreSQL\14\lib;C:\Program Files\PostgreSQL\14\bin;C:\Program Files\Java\jdk1.8.0_333\bin;.]
+28-Sep-2022 22:09:23.886 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 22:09:23.901 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [426] milliseconds
+28-Sep-2022 22:09:23.933 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Sep-2022 22:09:23.933 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.26]
+28-Sep-2022 22:09:23.941 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs]
+28-Sep-2022 22:09:24.204 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\docs] has finished in [262] ms
+28-Sep-2022 22:09:24.204 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\Enigma]
+28-Sep-2022 22:09:24.233 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\Enigma] has finished in [29] ms
+28-Sep-2022 22:09:24.233 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples]
+28-Sep-2022 22:09:24.553 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\examples] has finished in [320] ms
+28-Sep-2022 22:09:24.554 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager]
+28-Sep-2022 22:09:24.585 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\host-manager] has finished in [32] ms
+28-Sep-2022 22:09:24.586 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager]
+28-Sep-2022 22:09:24.612 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\manager] has finished in [26] ms
+28-Sep-2022 22:09:24.612 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT]
+28-Sep-2022 22:09:24.634 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\idan1\IdeaProjects\enigma_exc3\apache-tomcat-10.0.26\webapps\ROOT] has finished in [22] ms
+28-Sep-2022 22:09:24.636 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 22:09:24.654 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [751] milliseconds
+28-Sep-2022 22:10:25.238 WARNING [main] org.apache.catalina.core.StandardServer.await Invalid shutdown command [] received
+28-Sep-2022 22:11:21.300 WARNING [main] org.apache.catalina.core.StandardServer.await Invalid shutdown command [] received
+28-Sep-2022 22:11:37.712 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+28-Sep-2022 22:11:37.714 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 22:11:37.812 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+28-Sep-2022 22:11:37.841 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 22:11:37.846 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

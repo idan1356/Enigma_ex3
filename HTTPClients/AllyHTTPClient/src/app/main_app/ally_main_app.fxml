@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+         prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1"
+         xmlns="http://javafx.com/javafx/8.0.331" fx:controller="app.main_app.AllyAppController">
+  <Tab text="Dashboard">
+    <fx:include fx:id="dashboardComponent" source="dashboard/dashboard.fxml"/>
+  </Tab>
+  <Tab text="Contest">
+    <fx:include fx:id="contestComponent" source="contest/contest.fxml"/>
+  </Tab>
+</TabPane>

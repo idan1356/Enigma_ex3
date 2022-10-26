@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="CodeCalibrationComponent" xmlns="http://javafx.com/javafx/8.0.331" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.main_app.components.machine.code_calibration.CodeCalibrationController">
+   <bottom>
+      <HBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="randomButton" mnemonicParsing="false" onAction="#randomButtonAction" text="Random">
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+            <Button fx:id="setButton" mnemonicParsing="false" onAction="#setButtonAction" text="Set">
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <center>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <fx:include fx:id="reflectorCalibrationComponent" source="reflector_calibration/reflector_calibration.fxml" />
+                  <Separator prefWidth="200.0" />
+                  <fx:include fx:id="plugboardCalibrationComponent" source="plug_board_calibration/plug_board_calibration.fxml" />
+                  <Separator prefWidth="200.0" />
+                  <fx:include fx:id="rotorsCalibrationComponent" source="rotors_calibration/rotors_calibration.fxml" />
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<TableView fx:id="candidatesDetails" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.331" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.main_app.components.contest.candidates_details.CandidatesDataController">
+  <columns>
+    <TableColumn fx:id="allyName" prefWidth="75.0" text="Ally Name" />
+    <TableColumn fx:id="decodedMessage" prefWidth="115.3333740234375" text="Decoded Message" />
+    <TableColumn fx:id="position" prefWidth="84.6666259765625" text="Position" />
+    <TableColumn fx:id="rotors" prefWidth="75.0" text="Rotors" />
+    <TableColumn fx:id="reflector" prefWidth="75.0" text="Reflector" />
+  </columns>
+</TableView>

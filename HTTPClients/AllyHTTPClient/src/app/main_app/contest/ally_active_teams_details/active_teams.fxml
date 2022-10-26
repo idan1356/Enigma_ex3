@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<TableView fx:id="teamsDetails" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.331" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.main_app.contest.ally_active_teams_details.ActiveTeamsDetailsController">
+  <columns>
+    <TableColumn fx:id="allyName" prefWidth="75.0" text="Ally Name" />
+    <TableColumn fx:id="numOfAgents" prefWidth="100.0" text="Num of Agents" />
+    <TableColumn fx:id="missionSize" prefWidth="100.0" text="Mission Size" />
+  </columns>
+</TableView>

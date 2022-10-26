@@ -1,0 +1,8 @@
+.dictionary_button{
+    -fx-background-radius: 30px;
+    -fx-background-color: lightgrey;
+}
+
+.dictionary_button:hover{
+    -fx-background-color: steelblue;
+}

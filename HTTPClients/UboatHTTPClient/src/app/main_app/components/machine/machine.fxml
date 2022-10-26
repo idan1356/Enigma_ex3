@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="machineComponent" xmlns="http://javafx.com/javafx/8.0.331" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.main_app.components.machine.MachineController">
+   <center>
+      <SplitPane dividerPositions="0.05, 0.9">
+         <fx:include fx:id="CodeCalibrationComponent" source="code_calibration/code_calibration.fxml" />
+         <ScrollPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+            <fx:include fx:id="rotorsViewComponent" source="enigma_view/rotor_view.fxml" />
+         </ScrollPane>
+         <ScrollPane>
+            <VBox>
+               <fx:include fx:id="machineDetailsComponent" source="machine_details/machine_details.fxml" />
+               <Separator prefWidth="200.0" />
+               <fx:include fx:id="machineConfigurationComponent" source="current_machine_conf/machine_conf.fxml" />
+            </VBox>
+         </ScrollPane>
+      </SplitPane>
+   </center>
+</BorderPane>

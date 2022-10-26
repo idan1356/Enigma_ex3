@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/8.0.331" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.main_app.components.machine.machine_details.MachineDetailsController">
+   <children>
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="5.0" prefWidth="150.0">
+         <children>
+            <Label text="Machine">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Details">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </FlowPane>
+      <Label text="Possible Rotors" />
+      <Label fx:id="possibleRotorsLabel">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </Label>
+      <Label text="Reflector Count" />
+      <Label fx:id="reflectorCountLabel">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </Label>
+      <Label text="Messages Processed" />
+      <Label fx:id="messagesProcessedLabel">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets left="5.0" top="10.0" />
+   </padding>
+</VBox>

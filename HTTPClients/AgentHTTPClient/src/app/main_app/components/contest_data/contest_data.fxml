@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="40.0" xmlns="http://javafx.com/javafx/8.0.331" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.main_app.components.contest_data.ContestAndTeamController">
+   <children>
+      <VBox alignment="TOP_CENTER">
+         <children>
+            <Label text="Battlefield Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="battlefieldLabel" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER">
+         <children>
+            <Label text="Uboat Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="uboatLabel" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER">
+         <children>
+            <Label text="Status">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="statusLabel" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER">
+         <children>
+            <Label text="Difficulty">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="levelLabel" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER">
+         <children>
+            <Label text="Allies">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="alliesLabel" />
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</HBox>

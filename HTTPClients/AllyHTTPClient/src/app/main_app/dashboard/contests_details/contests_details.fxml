@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<TableView fx:id="contestDetails" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleRowSelect" xmlns="http://javafx.com/javafx/8.0.331" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.main_app.dashboard.contests_details.ContestDetailsController">
+  <columns>
+    <TableColumn fx:id="battlefield" prefWidth="75.0" text="Battlefield" />
+    <TableColumn fx:id="uboat" minWidth="-1.0" prefWidth="131.33333587646484" text="UBoat" />
+    <TableColumn fx:id="status" prefWidth="75.33332824707031" text="Status" />
+      <TableColumn fx:id="difficulty" prefWidth="146.00006103515625" text="Difficulty" />
+      <TableColumn fx:id="allies" prefWidth="75.0" text="Allies" />
+  </columns>
+</TableView>
