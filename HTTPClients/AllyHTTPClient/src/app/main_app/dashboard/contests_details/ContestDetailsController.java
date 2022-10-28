@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.util.*;
 
 import static app.utils.AppConstants.BASE_URL;
-import static app.utils.AppUtils.REFRESH_RATE;
+import static http.HttpClientUtil.REFRESH_RATE;
 
 public class ContestDetailsController implements Closeable {
     @FXML private TableView<ContestInfoModel> contestDetails;

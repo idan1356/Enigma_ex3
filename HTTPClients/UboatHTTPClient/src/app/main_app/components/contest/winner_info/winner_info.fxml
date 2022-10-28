@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="5.0" xmlns="http://javafx.com/javafx/8.0.331" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.main_app.components.contest.winner_info.WinnerInfoController">
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <Label text="Winner Candidate" textFill="#0581d9">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <HBox alignment="TOP_CENTER" spacing="50.0">
+      <VBox alignment="TOP_CENTER">
+         <children>
+            <Label text="Ally Name" />
+            <Label fx:id="allyNameLabel" />
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER">
+         <Label text="Decoded Message" />
+         <Label fx:id="decodedMessageLabel" />
+      </VBox>
+      <VBox alignment="TOP_CENTER">
+         <Label text="Position" />
+         <Label fx:id="positionLabel" />
+      </VBox>
+      <VBox alignment="TOP_CENTER">
+         <Label text="Rotors" />
+         <Label fx:id="rotorsLabel" />
+      </VBox>
+      <VBox alignment="TOP_CENTER">
+         <Label text="Reflector" />
+         <Label fx:id="reflectorLabel" />
+      </VBox>
+   </HBox>
+   <Button fx:id="endCompetitionButton" onAction="#endCompetitionButtonAction" mnemonicParsing="false" text="End Competition" />
+</VBox>

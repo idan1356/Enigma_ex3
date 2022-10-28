@@ -14,6 +14,8 @@ import java.util.Collection;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import static http.HttpClientUtil.REFRESH_RATE;
+
 import static app.utils.AppUtils.REFRESH_RATE;
 
 public class AgentInfoController implements Closeable {

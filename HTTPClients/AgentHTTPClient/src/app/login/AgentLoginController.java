@@ -20,7 +20,7 @@ import org.jetbrains.annotations.NotNull;
 import java.io.IOException;
 import java.util.*;
 
-import static app.utils.AppUtils.REFRESH_RATE;
+import static http.HttpClientUtil.REFRESH_RATE;
 
 public class AgentLoginController {
     @FXML Button signInButton;
@@ -123,9 +123,13 @@ public class AgentLoginController {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource(MAIN_APP_PATH));
         BorderPane borderPane = fxmlLoader.load();
+
         AgentAppController agentAppController = fxmlLoader.getController();
         agentAppController.setPrimaryStage(primaryStage);
+
         agentAppController.setAgentName(agentName.getText());
+        agentAppController.setAllyName(allyNameList.getValue());
+        agentAppController.setNumOfThreads((int)numOfThreadsSlider.getValue());
         primaryStage.getScene().setRoot(borderPane);
     }
 

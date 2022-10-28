@@ -29,7 +29,7 @@ import java.util.TimerTask;
 import java.util.stream.Collectors;
 
 import static app.utils.AppConstants.BASE_URL;
-import static app.utils.AppUtils.REFRESH_RATE;
+import static http.HttpClientUtil.REFRESH_RATE;
 
 public class BruteForceInputController {
     //components
@@ -41,6 +41,7 @@ public class BruteForceInputController {
     @FXML Label UboatProcessMessage;
     @FXML Label uboatOriginalMessage;
     @FXML Button readyButton;
+    @FXML Button processInputButton;
 
     SimpleStringProperty excludedChars;
     SimpleObjectProperty<Trie> dictionary;
@@ -60,6 +61,8 @@ public class BruteForceInputController {
         dictionaryComponentController.setParentController(this);
         readyButton.disableProperty().bind(UboatProcessMessage.textProperty().isEmpty()
                 .or(isReady));
+
+        processInputButton.disableProperty().bind(isReady);
     }
 
     @FXML
@@ -135,7 +138,6 @@ public class BruteForceInputController {
                         .forEach(word -> dictionary.get().insert(word));
             }
         } );
-        //TODO: remove chars not in ABC
     }
 
     public void cleanInputLabels(){
@@ -144,6 +146,7 @@ public class BruteForceInputController {
             uboatOriginalMessage.setText(null);
         });
     }
+
     public void readyOnAction(){
         HttpClientUtil.runAsync(BASE_URL + "/set_ready", new Callback() {
             @Override
@@ -181,5 +184,11 @@ public class BruteForceInputController {
         };
         Timer timer = new Timer();
         timer.schedule(startCompetitionTimerTask, REFRESH_RATE, REFRESH_RATE);
+    }
+
+    public void cleanAllData(){
+        isMatchStarted.set(false);
+        isReady.set(false);
+        cleanInputLabels();
     }
 }

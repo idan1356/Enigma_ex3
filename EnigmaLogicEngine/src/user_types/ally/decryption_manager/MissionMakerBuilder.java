@@ -20,7 +20,6 @@ public class MissionMakerBuilder {
     private List<Integer> reflectorSupplier;
     private double totalNumberofPositions;
     private final int missionSize;
-
     private double totalNumOfMissions;
 
     public MissionMakerBuilder(EncryptionMachineEngine engine, int missionSize) {

@@ -1,9 +1,11 @@
 package app.main_app.components.contest_data;
 import DTO.DTOContestInfo;
+import app.main_app.AgentAppController;
 import http.HttpClientUtil;
 import com.google.gson.Gson;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import okhttp3.Call;
@@ -11,6 +13,7 @@ import okhttp3.Callback;
 import okhttp3.Response;
 import org.jetbrains.annotations.NotNull;
 import java.io.IOException;
+import java.util.Objects;
 import java.util.Timer;
 import java.util.TimerTask;
 import static app.utils.AppConstants.BASE_URL;
@@ -24,10 +27,31 @@ public class ContestAndTeamController {
     @FXML Label statusLabel;
     @FXML Label alliesLabel;
 
-
+    SimpleStringProperty winnerName;
+    SimpleBooleanProperty isWinnerExists;
     SimpleBooleanProperty isBattlefieldExists;
 
-    public void refreshAllLabels(){
+    AgentAppController parentController;
+
+    @FXML
+    public void initialize(){
+        statusLabel.textProperty().addListener((observable, oldValue, newValue) -> {
+            if(Objects.equals(oldValue, "Active")){
+                String messageContent = parentController.getAllyName().equals(winnerName.get()) ? WIN_MESSAGE : LOSE_MESSAGE_PREFIX + winnerName.get();
+                MessagePopUp message = new MessagePopUp("End of Competition", messageContent);
+                Platform.runLater(message::pop);
+                parentController.cleanAllData();
+            }
+        });
+    }
+
+
+    public ContestAndTeamController(){
+        isWinnerExists = new SimpleBooleanProperty(false);
+        winnerName = new SimpleStringProperty();
+    }
+
+    public void getContestInfo(){
         TimerTask timerTask = new TimerTask(){
             @Override
             public void run() {
@@ -50,6 +74,12 @@ public class ContestAndTeamController {
                                 statusLabel.setText(contestInfo.getStatus());
                                 alliesLabel.setText(contestInfo.getAllies());
                                 isBattlefieldExists.setValue(true);
+
+                                if(contestInfo.getWinner() != null) {
+                                    isWinnerExists.set(true);
+                                    winnerName.set(contestInfo.getWinner().getAllyName());
+                                }
+
                             }
                         );
                     }
@@ -61,5 +91,17 @@ public class ContestAndTeamController {
     }
     public void setIsBattlefieldExists(SimpleBooleanProperty isBattlefieldExists) {
         this.isBattlefieldExists = isBattlefieldExists;
+    }
+
+    public boolean getIsWinnerExists(){
+        return isWinnerExists.get();
+    }
+    public void cleanAllData(){
+        isWinnerExists.set(false);
+        winnerName.set(null);
+    }
+
+    public void setParentController(AgentAppController parentController) {
+        this.parentController = parentController;
     }
 }

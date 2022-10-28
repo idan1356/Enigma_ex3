@@ -13,22 +13,26 @@ import utils.ServletUtils;
 import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 
 @WebServlet(name = "servlets.UpdateCandidateListServlet", urlPatterns = "/update_candidate_list")
 public class UpdateCandidateListServlet extends HttpServlet {
-    private static final String CANDIDATE_LIST = "candidatelist";
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         Agent agent = (Agent) req.getSession().getAttribute(AgentConstant.AGENT_OBJECT);
         Ally ally = ServletUtils.getAllyManager(getServletContext()).getAlly(agent.getConnectedAlly());
 
-        Scanner s = new Scanner(req.getReader());
-        String result = s.hasNext() ? s.next() : "";
+        String result = req.getReader().lines().collect(Collectors.joining(" "));
 
         List<DTOCandidate> candidates = new Gson().fromJson(result, new TypeToken<List<DTOCandidate>>() {}.getType());
-        ally.addCandidate(candidates);
+
+        synchronized (this) {
+            ally.addCandidate(candidates);
+            uBoat.addCandidate(candidates);
+        }
+
         resp.setStatus(HttpServletResponse.SC_ACCEPTED);
         resp.getWriter().println("candidates have been added successfully");
     }

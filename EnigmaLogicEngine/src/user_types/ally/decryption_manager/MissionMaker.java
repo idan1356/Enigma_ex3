@@ -74,6 +74,11 @@ public class MissionMaker implements Runnable {
     public double getTotalMissionsNum() {
         return totalMissionsNum;
     }
+
+    public void reset(){
+        missionsCreatedCounter = 0;
+        //totalMissionsNum = 0;
+    }
 }
 
 

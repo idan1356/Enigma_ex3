@@ -34,6 +34,7 @@ public class ProcessUBoatInputServlet extends HttpServlet {
             //decode string and save processed message
             EncryptionMachineEngine engine = battlefield.getEngine();
             String encoded = engine.processInput(message).getOutput();
+            engine.resetMachine();
             battlefield.setOriginalMessage(message);
             battlefield.setProcessMessage(encoded);
 

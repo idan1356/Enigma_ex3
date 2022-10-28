@@ -1,5 +1,7 @@
 package app.main_app.contest.candidate_details;
 
+import DTO.DTOCandidate;
+import app.main_app.components.contest.candidates_details.CandidateModel;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -13,8 +15,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.stream.Collectors;
 
-import static app.utils.AppUtils.REFRESH_RATE;
+import static http.HttpClientUtil.REFRESH_RATE;
 
 public class AgentCandidatesDataController implements Closeable {
     @FXML private TableView<AgentCandidateModel> candidatesDetails;
@@ -38,8 +41,16 @@ public class AgentCandidatesDataController implements Closeable {
         candidatesDetails.setItems(data);
         startCandidateListRefresher();
     }
-    private void updateUsersList(Collection<AgentCandidateModel> candidateModels) {
-        Platform.runLater(() -> data.addAll(candidateModels));
+    private void updateUsersList(Collection<DTOCandidate> dtoCandidates) {
+        Collection<AgentCandidateModel> candidates = dtoCandidates.stream().map(dtoCandidate -> new AgentCandidateModel(
+                dtoCandidate.getAgentName(),
+                dtoCandidate.getCandidateString(),
+                dtoCandidate.getInitialPosition(),
+                dtoCandidate.getRotorsPosition(),
+                String.valueOf(dtoCandidate.getReflector())
+        )).collect(Collectors.toList());
+
+        Platform.runLater(() -> data.addAll(candidates));
     }
 
     public void startCandidateListRefresher(){
@@ -54,5 +65,10 @@ public class AgentCandidatesDataController implements Closeable {
             refresher.cancel();
             timer.cancel();
         }
+    }
+
+    public void cleanAllData(){
+        data.clear();
+        candidatesDetails.refresh();
     }
 }

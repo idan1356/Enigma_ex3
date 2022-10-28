@@ -23,7 +23,7 @@ public class UboatHTTPClientTaskMain extends Application {
         loginController.setPrimaryStage(primaryStage);
 
         //set stage
-        primaryStage.setTitle("Enigma App");
+        primaryStage.setTitle("U-Boat HTTP Client App");
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();

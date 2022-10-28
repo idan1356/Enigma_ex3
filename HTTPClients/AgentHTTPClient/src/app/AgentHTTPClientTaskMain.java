@@ -22,7 +22,7 @@ public class AgentHTTPClientTaskMain extends Application {
         loginController.setPrimaryStage(primaryStage);
 
         //set stage
-        primaryStage.setTitle("Agent HTTP Client");
+        primaryStage.setTitle("Agent HTTP Client App");
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();

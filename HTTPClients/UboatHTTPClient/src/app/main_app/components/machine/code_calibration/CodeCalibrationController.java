@@ -1,7 +1,6 @@
 package app.main_app.components.machine.code_calibration;
 
 import app.main_app.components.machine.MachineController;
-import app.main_app.components.machine.code_calibration.plug_board_calibration.PlugboardCalibrationController;
 import app.main_app.components.machine.code_calibration.reflector_calibration.ReflectorCalibrationController;
 import app.main_app.components.machine.code_calibration.rotors_calibration.RotorsCalibrationController;
 import http.HttpClientUtil;
@@ -19,8 +18,6 @@ import static app.utils.AppConstants.BASE_URL;
 
 public class CodeCalibrationController {
     //components
-    @FXML VBox plugboardCalibrationComponent;
-    @FXML PlugboardCalibrationController plugboardCalibrationComponentController;
     @FXML VBox reflectorCalibrationComponent;
     @FXML ReflectorCalibrationController reflectorCalibrationComponentController;
     @FXML VBox rotorsCalibrationComponent;
@@ -92,7 +89,6 @@ public class CodeCalibrationController {
                 if (response.isSuccessful()) {
                     machineState.refresh();
                     resetCalibration();
-
                 }
                 else {
                     response.close();

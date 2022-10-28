@@ -43,19 +43,24 @@ import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 import static app.utils.AppConstants.BASE_URL;
-import static app.utils.AppUtils.REFRESH_RATE;
 import static engine.machine.Machine.JAXB_XML_GAME_PACKAGE_NAME;
+import static http.HttpClientUtil.REFRESH_RATE;
 
 public class AgentAppController {
-    @FXML Stage primaryStage;
-    @FXML HBox contestDataComponent;
-    @FXML ContestAndTeamController contestDataComponentController;
-    @FXML TableView<CandidateModel> agentsCandidateComponent;
-    @FXML CandidateDetailsController agentsCandidateComponentController;
-
-
-    @FXML VBox dmProgressComponent;
-    @FXML DMProgressController dmProgressComponentController;
+    @FXML
+    Stage primaryStage;
+    @FXML
+    HBox contestDataComponent;
+    @FXML
+    ContestAndTeamController contestDataComponentController;
+    @FXML
+    TableView<CandidateModel> agentsCandidateComponent;
+    @FXML
+    CandidateDetailsController agentsCandidateComponentController;
+    @FXML
+    VBox dmProgressComponent;
+    @FXML
+    DMProgressController dmProgressComponentController;
 
     SimpleStringProperty allyName;
     SimpleStringProperty agentName;
@@ -84,13 +89,14 @@ public class AgentAppController {
         numOfThreads = new SimpleIntegerProperty();
         timer = new Timer();
         futureList = new ArrayList<>();
-        executorService = Executors.newFixedThreadPool(5);
     }
 
     @FXML
     public void initialize() {
-        contestDataComponentController.refreshAllLabels();
+        contestDataComponentController.setParentController(this);
+        contestDataComponentController.getContestInfo();
         contestDataComponentController.setIsBattlefieldExists(isBattlefieldExists);
+
         checkIfMissionPoolIsEmpty();
         getMetaData();
         isBattlefieldExists.addListener(observable -> {
@@ -147,9 +153,9 @@ public class AgentAppController {
                     public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                         assert response.body() != null;
                         DTOAgentMetaData agentMetaData = new Gson().fromJson(response.body().string(), DTOAgentMetaData.class);
-                        if(response.isSuccessful()) {
-                            allyName.set(agentMetaData.getAllyName());
-                            numOfThreads.set(agentMetaData.getNumOfThreads());
+                        if (response.isSuccessful()) {
+                            //allyName.set(agentMetaData.getAllyName());
+                            //numOfThreads.set(agentMetaData.getNumOfThreads());
                             processedString.set(agentMetaData.getProcessedString());
                         }
                     }
@@ -161,6 +167,9 @@ public class AgentAppController {
 
     @FXML
     public void sendGetMission() {
+        if (contestDataComponentController.getIsWinnerExists())
+            return;
+
         HttpClientUtil.runAsync(BASE_URL + "/get_missions", new Callback() {
             @Override
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
@@ -168,25 +177,24 @@ public class AgentAppController {
             @Override
             public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                 assert response.body() != null;
-                Consumer<Collection<DTOCandidate>> consumer = (Collection<DTOCandidate> candidates)-> {
-                        List<CandidateModel> candidateModels = candidates.stream()
-                                .map(candidate -> new CandidateModel(candidate.getInitialPosition(), candidate.getRotorsPosition(), String.valueOf(candidate.getReflector()), candidate.getCandidateString()))
-                                .collect(Collectors.toList());
+                Consumer<Collection<DTOCandidate>> updateCandidatesMetrics = (Collection<DTOCandidate> candidates) -> {
+                    List<CandidateModel> candidateModels = candidates.stream()
+                            .map(candidate -> new CandidateModel(candidate.getInitialPosition(), candidate.getRotorsPosition(), String.valueOf(candidate.getReflector()), candidate.getCandidateString()))
+                            .collect(Collectors.toList());
 
                     Platform.runLater(() -> {
                         dmProgressComponentController.getNumOfCandidatesCreated().set(dmProgressComponentController.getNumOfCandidatesCreated().get() + candidateModels.size());
                         agentsCandidateComponentController.addCandidates(candidateModels);
                     });
                 };
-
-                Consumer<Integer> consumer2 = (Integer integer) -> {
+                Consumer<Integer> updateMissionsTaken = (Integer integer) -> {
                     Platform.runLater(() -> dmProgressComponentController.getNumOfMissionsTaken().set(dmProgressComponentController.getNumOfMissionsTaken().get() + integer));
                 };
 
                 if(response.isSuccessful()) {
                     List<DTOMission> missions = new Gson().fromJson(response.body().string(), new TypeToken<List<DTOMission>>() {}.getType());
                     futureList = missions.stream()
-                            .map(mission -> executorService.submit(new DecryptionMission(mission, trie.get(), engine.get(), processedString.get(), allyName.getName(), agentName.get(), consumer, consumer2)))
+                            .map(mission -> executorService.submit(new DecryptionMission(mission, trie.get(), engine.get(), processedString.get(), allyName.get(), agentName.get(), updateCandidatesMetrics, updateMissionsTaken)))
                             .collect(Collectors.toList());
                 }
             }
@@ -217,6 +225,28 @@ public class AgentAppController {
 
     public void setAllyName(String allyName) {
         this.allyName.set(allyName);
+    }
+
+    public void setNumOfThreads(int numOfThreads) {
+        if (executorService != null) {
+            throw new RuntimeException("num of threads cannot be set twice");
+        }
+        this.numOfThreads.set(numOfThreads);
+        executorService = Executors.newFixedThreadPool(numOfThreads);
+    }
+
+    public void cleanAllData() {
+        for (Future<?> future : futureList)
+            future.cancel(true);
+        futureList.clear();
+
+        agentsCandidateComponentController.cleanAllData();
+        contestDataComponentController.cleanAllData();
+        dmProgressComponentController.cleanData();
+    }
+
+    public String getAllyName() {
+        return allyName.get();
     }
 }
 

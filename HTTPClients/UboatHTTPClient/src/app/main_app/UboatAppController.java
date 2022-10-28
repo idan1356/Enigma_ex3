@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import okhttp3.*;
@@ -23,7 +24,7 @@ import java.io.IOException;
 import static app.utils.AppConstants.BASE_URL;
 
 public class UboatAppController {
-    @FXML HBox contestComponent;
+    @FXML VBox contestComponent;
     @FXML ContestController contestComponentController;
     @FXML BorderPane machineComponent;
     @FXML MachineController machineComponentController;

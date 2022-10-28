@@ -68,10 +68,6 @@ public class UboatLoginController {
         this.primaryStage = primaryStage;
     }
 
-    public OkHttpClient getClient() {
-        return client;
-    }
-
     public void changeSceneToMainApp() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
 

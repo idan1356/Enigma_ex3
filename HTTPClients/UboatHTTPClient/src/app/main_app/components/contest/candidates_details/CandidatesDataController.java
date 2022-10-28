@@ -1,6 +1,6 @@
 package app.main_app.components.contest.candidates_details;
 
-import app.main_app.components.contest.active_teams_details.TeamInfoModel;
+import DTO.DTOCandidate;
 import app.utils.AppUtils;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -15,8 +15,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.stream.Collectors;
 
-import static app.utils.AppUtils.REFRESH_RATE;
+import static http.HttpClientUtil.REFRESH_RATE;
 
 public class CandidatesDataController implements Closeable {
     @FXML private TableView<CandidateModel> candidatesDetails;
@@ -38,12 +39,19 @@ public class CandidatesDataController implements Closeable {
         rotors.setCellValueFactory(new PropertyValueFactory<>("Rotors"));
         reflector.setCellValueFactory(new PropertyValueFactory<>("Reflector"));
         candidatesDetails.setItems(data);
+
+        startCandidateListRefresher();
     }
-    private void updateUsersList(Collection<CandidateModel> candidateModels) {
-        Platform.runLater(() -> {
-            data.clear();
-            data.addAll(candidateModels);
-        });
+    private void updateUsersList(Collection<DTOCandidate> dtoCandidates) {
+        Collection<CandidateModel> candidates = dtoCandidates.stream().map(dtoCandidate -> new CandidateModel(
+                dtoCandidate.getAllyName(),
+                dtoCandidate.getCandidateString(),
+                dtoCandidate.getInitialPosition(),
+                dtoCandidate.getRotorsPosition(),
+                String.valueOf(dtoCandidate.getReflector())
+        )).collect(Collectors.toList());
+
+        Platform.runLater(() -> data.addAll(candidates));
     }
 
     public void startCandidateListRefresher(){
@@ -60,5 +68,9 @@ public class CandidatesDataController implements Closeable {
             refresher.cancel();
             timer.cancel();
         }
+    }
+
+    public void clearAllData(){
+        data.clear();
     }
 }

@@ -66,6 +66,7 @@ public class AlliesListRefresher extends TimerTask {
                     allyJsonObject.get("agents").getAsJsonArray().size(),
                     allyJsonObject.get("missionSize").getAsInt()
             );
+
             allAllies.add(info);
         });
         return allAllies;

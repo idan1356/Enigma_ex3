@@ -31,7 +31,7 @@ public class CandidateDetailsController {
         data.addAll(candidates);
     }
 
-    public void resetCandidateTable(){
+    public void cleanAllData(){
         data.clear();
     }
 }

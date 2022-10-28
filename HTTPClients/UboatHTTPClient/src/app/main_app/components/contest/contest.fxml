@@ -1,13 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.331" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.main_app.components.contest.ContestController">
-   <fx:include fx:id="activeTeamsDetailsComponent" source="active_teams_details/active_teams.fxml" />
-   <fx:include fx:id="bruteForceInputComponent" source="brute_force_input/brute_force_input.fxml" />
-   <fx:include fx:id="candidateDetailsComponent" source="candidates_details/candidates.fxml" />
+<VBox alignment="TOP_CENTER" spacing="5.0" xmlns="http://javafx.com/javafx/8.0.331" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.main_app.components.contest.ContestController">
+   <children>
+      <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" spacing="20.0">
+         <VBox alignment="TOP_CENTER">
+            <children>
+               <Label text="Active Teams Details" textFill="#0581d9">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Label>
+               <fx:include fx:id="activeTeamsDetailsComponent" source="active_teams_details/active_teams.fxml" />
+            </children>
+         </VBox>
+         <VBox alignment="TOP_CENTER">
+            <children>
+               <Label text="Candidates Data" textFill="#0581d9">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </Label>
+               <fx:include fx:id="candidateDetailsComponent" source="candidates_details/candidates.fxml" />
+            </children>
+         </VBox>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+      <Separator prefWidth="200.0">
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+      </Separator>
+      <ScrollPane>
+         <content>
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <Label text="Encrypt String" textFill="#0581d9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <fx:include fx:id="bruteForceInputComponent" source="brute_force_input/brute_force_input.fxml" />
+                  <fx:include fx:id="winnerInfoComponent" source="winner_info/winner_info.fxml" />
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
    <padding>
-      <Insets left="10.0" right="10.0" />
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
    </padding>
-</HBox>
+</VBox>

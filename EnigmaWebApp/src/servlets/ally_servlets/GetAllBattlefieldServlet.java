@@ -31,7 +31,8 @@ public class GetAllBattlefieldServlet extends HttpServlet {
                     battlefield.getContestStatus(),
                     battlefield.getLevel().name(),
                 battlefield.getCurrentAlliesNum() + "/" + battlefield.getTotalAllyNumber(),
-                    battlefield.getProcessMessage()))
+                    battlefield.getProcessMessage(),
+                    battlefield.getWinner()))
                 .collect(Collectors.toList());
 
         try (PrintWriter out = response.getWriter()) {

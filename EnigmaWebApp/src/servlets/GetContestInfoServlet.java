@@ -30,8 +30,8 @@ public class GetContestInfoServlet extends HttpServlet {
                 battlefield.getContestStatus(),
                 battlefield.getLevel().name(),
                 battlefield.getCurrentAlliesNum() + "/" + battlefield.getTotalAllyNumber(),
-                battlefield.getProcessMessage()
-        );
+                battlefield.getProcessMessage(),
+                battlefield.getWinner());
         
         Gson gson = new Gson();
         String contestJsonString = gson.toJson(contestInfo);

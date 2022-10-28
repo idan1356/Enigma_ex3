@@ -1,15 +1,22 @@
 package battlefield;
 
+import DTO.DTOCandidate;
+import DTO.DTO_enigma.DTO_enigma_outputs.DTOEnigmaSpecs;
 import engine.EncryptionMachineEngine;
 import engine.machine.components.enigma_factory.enigma.generated.CTEDecipher;
+import engine.machine.utils.RomanNumbers;
+import javafx.util.Pair;
 import misc.BruteForceDifficulty;
 import misc.EngineCloner;
 import user_types.ally.Ally;
 import user_types.uboat.UBoat;
+
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class Battlefield {
     private final BruteForceDifficulty level;

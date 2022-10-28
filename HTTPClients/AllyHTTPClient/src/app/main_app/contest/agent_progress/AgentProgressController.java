@@ -15,7 +15,8 @@ import java.util.Collection;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import static app.utils.AppUtils.REFRESH_RATE;
+import static http.HttpClientUtil.REFRESH_RATE;
+
 
 public class AgentProgressController implements Closeable {
     @FXML private TableView<AgentProgressModel> agentsDetails;

@@ -22,7 +22,7 @@ public class AllyHTTPClientTaskMain extends Application {
         loginController.setPrimaryStage(primaryStage);
 
         //set stage
-        primaryStage.setTitle("Ally App");
+        primaryStage.setTitle("Ally HTTP Client App");
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();

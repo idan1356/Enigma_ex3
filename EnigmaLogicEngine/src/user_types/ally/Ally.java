@@ -7,27 +7,22 @@ import user_types.agent.Agent;
 import user_types.ally.decryption_manager.MissionMaker;
 import user_types.ally.decryption_manager.MissionMakerBuilder;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 public class Ally {
     private String battlefield;
-    private String allyName;
-    private HashSet<Agent> agents;
+    private final String allyName;
+    private final HashSet<Agent> agents;
     private int missionSize;
     private MissionMaker missionMaker;
-    private boolean ifStartMissionMaker;
-    private List<DTOCandidate> candidateList;
+    private final List<DTOCandidate> candidateList;
     private int candidateListDelta;
-
+    private Thread curThread;
     private boolean isReady;
 
     public Ally(String name){
         this.agents = new HashSet<>();
         this.allyName = name;
-        this.ifStartMissionMaker = false;
         this.isReady = false;
         candidateList = new ArrayList<>();
         candidateListDelta = 0;
@@ -54,15 +49,12 @@ public class Ally {
 
     public void startCompetition(EncryptionMachineEngine engine, BruteForceDifficulty difficulty){
         missionMaker = new MissionMakerBuilder(engine, missionSize).build(difficulty);
-        new Thread(missionMaker).start();
+        curThread = new Thread(missionMaker);
+        curThread.start();
     }
     
     public List<DTOMission> takeMissions(int numOfMissions) throws InterruptedException {
         return missionMaker.takeMissions(numOfMissions);
-    }
-
-    public boolean getIfStartMissionMaker(){
-        return ifStartMissionMaker;
     }
 
     public void setReadyStatus(boolean ready) {
@@ -89,6 +81,20 @@ public class Ally {
     public List<DTOCandidate> getCandidateListDelta() {
         List<DTOCandidate> candidatelist = candidateList.subList(candidateListDelta, candidateList.size());
         candidateListDelta = candidateList.size();
-        return candidatelist;
+        return Collections.unmodifiableList(candidatelist);
+    }
+
+    public void stopCreatingMissions(){
+        curThread.interrupt();
+    }
+
+    public void reset(){
+        stopCreatingMissions();
+        candidateListDelta = 0;
+        candidateList.clear();
+        isReady = false;
+
+        missionMaker.reset();
+        agents.forEach(Agent::reset);
     }
 }

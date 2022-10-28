@@ -37,8 +37,6 @@
                <children>
                   <fx:include fx:id="reflectorCalibrationComponent" source="reflector_calibration/reflector_calibration.fxml" />
                   <Separator prefWidth="200.0" />
-                  <fx:include fx:id="plugboardCalibrationComponent" source="plug_board_calibration/plug_board_calibration.fxml" />
-                  <Separator prefWidth="200.0" />
                   <fx:include fx:id="rotorsCalibrationComponent" source="rotors_calibration/rotors_calibration.fxml" />
                </children>
             </VBox>

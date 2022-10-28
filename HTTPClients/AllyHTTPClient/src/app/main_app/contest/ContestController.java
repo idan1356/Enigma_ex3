@@ -2,10 +2,12 @@ package app.main_app.contest;
 
 import DTO.DTOCandidate;
 import DTO.DTODmprogress;
+import app.main_app.AllyAppController;
 import app.main_app.contest.agent_progress.AgentProgressController;
 import app.main_app.contest.agent_progress.AgentProgressModel;
 import app.main_app.contest.ally_active_teams_details.ActiveTeamsDetailsController;
 import app.main_app.contest.ally_active_teams_details.TeamInfoModel;
+import app.main_app.contest.candidate_details.AgentCandidatesDataController;
 import app.main_app.contest.contest_data.ContestDataController;
 import com.google.gson.Gson;
 import http.HttpClientUtil;
@@ -24,33 +26,37 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import static app.utils.AppConstants.BASE_URL;
-import static app.utils.AppUtils.REFRESH_RATE;
+import static http.HttpClientUtil.REFRESH_RATE;
 
 public class ContestController {
     @FXML FlowPane contestDataComponent;
     @FXML ContestDataController contestDataComponentController;
     @FXML TableView<AgentProgressModel> agentProgressComponent;
-    @FXML AgentProgressController agentProgressController;
+    @FXML AgentProgressController agentProgressComponentController;
     @FXML TableView<TeamInfoModel> activeTeamsDetailsComponent;
-    @FXML TableView<DTOCandidate> candidateProgressComponent;
-
     @FXML ActiveTeamsDetailsController activeTeamsDetailsComponentController;
+    @FXML TableView<DTOCandidate> candidateProgressComponent;
+    @FXML AgentCandidatesDataController candidateProgressComponentController;
+
     @FXML Label numOfFinishedMissions;
     @FXML Label nunOfTotalMissions;
     @FXML Label numOfCreatedMissions;
 
     Timer timer = new Timer();
 
+    AllyAppController parentController;
+
     @FXML
     public void initialize(){
         updateProgress();
+
+        contestDataComponentController.setParentController(this);
     }
 
     public void updateProgressLabels(DTODmprogress dmprogress){
         numOfFinishedMissions.setText(String.valueOf(dmprogress.getNumOfFinishedMissions()));
         nunOfTotalMissions.setText(String.valueOf(dmprogress.getNumOfTotalMissions()));
         numOfCreatedMissions.setText(String.valueOf(dmprogress.getNumOfMissionsCreated()));
-
     }
 
     public void updateProgress(){
@@ -70,11 +76,22 @@ public class ContestController {
                             Platform.runLater(()->updateProgressLabels(dmProgress));
                         }
                     }
-                }
-                );
+                });
             }
         };
 
         timer.schedule(timerTask, REFRESH_RATE, REFRESH_RATE);
+    }
+
+    public void setParentController(AllyAppController parentController) {
+        this.parentController = parentController;
+    }
+
+    public AllyAppController getParentController() {
+        return parentController;
+    }
+
+    public void cleanAllData(){
+        candidateProgressComponentController.cleanAllData();
     }
 }

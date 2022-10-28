@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" spacing="5.0" stylesheets="@dictionary.css" xmlns="http://javafx.com/javafx/8.0.331" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.main_app.components.contest.brute_force_input.dictionary_displayer.DictionaryController">
+<VBox alignment="TOP_CENTER" prefWidth="450.0" spacing="5.0" stylesheets="@dictionary.css" xmlns="http://javafx.com/javafx/8.0.331" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.main_app.components.contest.brute_force_input.dictionary_displayer.DictionaryController">
    <opaqueInsets>
       <Insets />
    </opaqueInsets>

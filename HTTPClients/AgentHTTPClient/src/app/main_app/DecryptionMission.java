@@ -64,7 +64,7 @@ public class DecryptionMission implements Runnable{
 
             if(allWordsInDict){
                 candidateList.add(new DTOCandidate(allyName, dtoMission.getReflector(),curPosition,
-                        decoded,rotors,agentName));
+                        decoded, rotors, agentName));
                 System.out.println("this is the candidate string-" + decoded);
             }
         }

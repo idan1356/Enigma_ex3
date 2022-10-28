@@ -1,6 +1,5 @@
 package app.main_app.contest.ally_active_teams_details;
 
-import app.utils.AppUtils;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,7 +14,7 @@ import java.util.Collection;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import static app.utils.AppUtils.REFRESH_RATE;
+import static http.HttpClientUtil.REFRESH_RATE;
 
 public class ActiveTeamsDetailsController implements Closeable {
     @FXML private TableView<TeamInfoModel> teamsDetails;

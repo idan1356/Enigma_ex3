@@ -23,12 +23,11 @@ public class GetAllBattlefieldAlliesServlet extends HttpServlet {
         if (battlefield == null) {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             response.getWriter().println("user is not permitted for this action");
+            return;
         }
 
         Gson gson = new Gson();
-        assert battlefield != null;
         String alliesJsonResponse = gson.toJson(battlefield.getAllyList());
-
         try (PrintWriter out = response.getWriter()) {
             out.print(alliesJsonResponse);
             out.flush();

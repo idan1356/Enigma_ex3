@@ -106,6 +106,9 @@ public class DashboardController {
             }
         });
     }
+    public void cleanAllData(){
+        isReady.setValue(false);
+    }
 }
 
 

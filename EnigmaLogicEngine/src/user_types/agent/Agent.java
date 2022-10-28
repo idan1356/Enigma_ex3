@@ -58,4 +58,10 @@ public class Agent {
     public void setMissionsTakenCount(int missionsTakenCount) {
         this.missionsTakenCount = missionsTakenCount;
     }
+
+    public void reset(){
+        missionsFinishedCount = 0;
+        missionsTakenCount = 0;
+        candidatesCreated = 0;
+    }
 }

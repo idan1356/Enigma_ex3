@@ -64,16 +64,13 @@ public class AllyLoginController {
         this.primaryStage = primaryStage;
     }
 
-    public OkHttpClient getClient() {
-        return client;
-    }
-
     public void changeSceneToMainApp() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource(MAIN_APP_PATH));
         TabPane borderPane = fxmlLoader.load();
         AllyAppController allyAppController = fxmlLoader.getController();
         allyAppController.setPrimaryStage(primaryStage);
+        allyAppController.setAllyName(UsernameTextField.getText());
         primaryStage.getScene().setRoot(borderPane);
     }
 }

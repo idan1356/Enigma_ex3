@@ -1,20 +1,24 @@
 package app.main_app.components.contest;
+
 import app.main_app.components.contest.active_teams_details.ActiveTeamsDetailsController;
 import app.main_app.components.contest.active_teams_details.TeamInfoModel;
 import app.main_app.components.contest.brute_force_input.BruteForceInputController;
 import app.main_app.components.contest.candidates_details.CandidateModel;
 import app.main_app.components.contest.candidates_details.CandidatesDataController;
-import javafx.collections.ObservableList;
+import app.main_app.components.contest.winner_info.WinnerInfoController;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 public class ContestController {
     @FXML TableView<TeamInfoModel> activeTeamsDetailsComponent;
     @FXML ActiveTeamsDetailsController activeTeamsDetailsComponentController;
-
-    @FXML VBox bruteForceInputComponent;
+    @FXML HBox bruteForceInputComponent;
     @FXML BruteForceInputController bruteForceInputComponentController;
+    @FXML VBox winnerInfoComponent;
+    @FXML WinnerInfoController winnerInfoComponentController;
 
     @FXML TableView<CandidateModel> candidateDetailsComponent;
     @FXML CandidatesDataController candidateDetailsComponentController;
@@ -22,6 +26,7 @@ public class ContestController {
     @FXML
     public void initialize(){
         bruteForceInputComponentController.setParentController(this);
+        winnerInfoComponentController.setParentController(this);
     }
 
     public void setActive() {
@@ -41,8 +46,9 @@ public class ContestController {
     public void cleanUserInputLabels(){
         bruteForceInputComponentController.cleanInputLabels();
     }
-
-    public ObservableList<TeamInfoModel> isActiveTeamsEmpty(){
-        return activeTeamsDetailsComponentController.getTeamDetails();
+    public void cleanAllData(){
+        bruteForceInputComponentController.cleanAllData();
+        candidateDetailsComponentController.clearAllData();
+        winnerInfoComponentController.clearAllData();
     }
 }

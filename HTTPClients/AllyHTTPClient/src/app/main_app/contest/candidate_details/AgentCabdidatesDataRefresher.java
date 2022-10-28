@@ -1,4 +1,5 @@
 package app.main_app.contest.candidate_details;
+import DTO.DTOCandidate;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import http.HttpClientUtil;
@@ -17,10 +18,10 @@ import static app.utils.AppConstants.BASE_URL;
 
 public class AgentCabdidatesDataRefresher extends TimerTask {
     private final Consumer<String> httpRequestLoggerConsumer;
-    private final Consumer<List<AgentCandidateModel>> usersListConsumer;
+    private final Consumer<List<DTOCandidate>> usersListConsumer;
     private int requestNumber;
 
-    public AgentCabdidatesDataRefresher(Consumer<String> httpRequestLoggerConsumer, Consumer<List<AgentCandidateModel>> usersListConsumer) {
+    public AgentCabdidatesDataRefresher(Consumer<String> httpRequestLoggerConsumer, Consumer<List<DTOCandidate>> usersListConsumer) {
         this.httpRequestLoggerConsumer = httpRequestLoggerConsumer;
         this.usersListConsumer = usersListConsumer;
         requestNumber = 0;
@@ -42,8 +43,7 @@ public class AgentCabdidatesDataRefresher extends TimerTask {
             public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                 assert response.body() != null;
                 if(response.isSuccessful()) {
-                    List<AgentCandidateModel> fromJsonToCollection = new Gson().fromJson(response.body().string(), new TypeToken<List<AgentCandidateModel>>() {
-                    }.getType());
+                    List<DTOCandidate> fromJsonToCollection = new Gson().fromJson(response.body().string(), new TypeToken<List<DTOCandidate>>() {}.getType());
                     if (!fromJsonToCollection.isEmpty())
                         usersListConsumer.accept(fromJsonToCollection);
                 }
