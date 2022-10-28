@@ -27,6 +27,8 @@ public class SetRandomEnigmaServlet extends HttpServlet {
 
         EncryptionMachineEngine engine = battlefield.getEngine();
         engine.setRandomEnigmaSettings();
+        engine.setPlugboard("");
+        engine.setEnigmaSettings();
         response.setStatus(HttpServletResponse.SC_OK);
         response.getWriter().println("engine was updated successfully");
     }

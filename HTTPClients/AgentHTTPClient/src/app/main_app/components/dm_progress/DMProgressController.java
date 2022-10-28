@@ -39,11 +39,9 @@ public class DMProgressController {
     public SimpleIntegerProperty getNumOfCompletedMissions() {
         return numOfCompletedMissions;
     }
-
     public SimpleIntegerProperty getNumOfMissionsTaken() {
         return numOfMissionsTaken;
     }
-
     public SimpleIntegerProperty getNumOfCandidatesCreated() {
         return numOfCandidatesCreated;
     }
@@ -59,13 +57,17 @@ public class DMProgressController {
         HttpClientUtil.runAsync(url.toString(), new Callback() {
             @Override
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
-
             }
 
             @Override
             public void onResponse(@NotNull Call call, @NotNull Response response) {
-
             }
         });
+    }
 
-    }}
+    public void cleanData(){
+        numOfCompletedMissions.set(0);
+        numOfMissionsTaken.set(0);
+        numOfCandidatesCreated.set(0);
+    }
+}

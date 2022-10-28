@@ -105,12 +105,10 @@ public class CodeCalibrationController {
         this.machineState = machineState;
 
         reflectorCalibrationComponentController.setMachineState(machineState);
-        plugboardCalibrationComponentController.setMachineState(machineState);
         rotorsCalibrationComponentController.setMachineState(machineState);
     }
 
     public void resetCalibration(){
-        plugboardCalibrationComponentController.resetPlugsButtonAction();
         rotorsCalibrationComponentController.resetRotorsButtonAction();
         parentController.getParentController().cleanUboatStringInput();
     }

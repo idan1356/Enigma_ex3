@@ -132,5 +132,4 @@ public class AgentLoginController {
         agentAppController.setNumOfThreads((int)numOfThreadsSlider.getValue());
         primaryStage.getScene().setRoot(borderPane);
     }
-
 }

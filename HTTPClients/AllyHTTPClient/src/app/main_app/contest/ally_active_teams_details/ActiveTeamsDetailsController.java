@@ -26,7 +26,6 @@ public class ActiveTeamsDetailsController implements Closeable {
     private TimerTask refresher;
 
 
-
     @FXML
     public void initialize(){
         allyName.setCellValueFactory(new PropertyValueFactory<>("AllyName"));

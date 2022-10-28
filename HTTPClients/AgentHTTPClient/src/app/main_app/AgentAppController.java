@@ -1,5 +1,4 @@
 package app.main_app;
-
 import DTO.DTOAgentMetaData;
 import DTO.DTOCandidate;
 import DTO.DTOMission;
@@ -124,7 +123,7 @@ public class AgentAppController {
         });
     }
 
-    public CTEEnigma deserializeJAXB (String xmlFile) throws JAXBException {
+    public CTEEnigma deserializeJAXB(String xmlFile) throws JAXBException {
         JAXBContext jc = JAXBContext.newInstance(JAXB_XML_GAME_PACKAGE_NAME);
         Unmarshaller u = jc.createUnmarshaller();
 
@@ -132,23 +131,23 @@ public class AgentAppController {
         return (CTEEnigma) u.unmarshal(reader);
     }
 
-    public void setTrie(CTEDictionary cteDictionary){
-            Arrays.stream(cteDictionary.getWords().toUpperCase().replaceAll(String.format("[%s]", cteDictionary.getExcludeChars()), "")
-                    .split(" "))
-                    .collect(Collectors.toList())
-                    .forEach(word-> trie.get().insert(word));
+    public void setTrie(CTEDictionary cteDictionary) {
+        Arrays.stream(cteDictionary.getWords().toUpperCase().replaceAll(String.format("[%s]", cteDictionary.getExcludeChars()), "")
+                        .split(" "))
+                .collect(Collectors.toList())
+                .forEach(word -> trie.get().insert(word));
     }
 
     @FXML
-    public void getMetaData(){
+    public void getMetaData() {
         TimerTask getMetadataTask = new TimerTask() {
             @Override
             public void run() {
                 HttpClientUtil.runAsync(BASE_URL + "/get_meta_data", new Callback() {
                     @Override
                     public void onFailure(@NotNull Call call, @NotNull IOException e) {
-
                     }
+
                     @Override
                     public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                         assert response.body() != null;
@@ -174,6 +173,7 @@ public class AgentAppController {
             @Override
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
             }
+
             @Override
             public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                 assert response.body() != null;
@@ -191,8 +191,9 @@ public class AgentAppController {
                     Platform.runLater(() -> dmProgressComponentController.getNumOfMissionsTaken().set(dmProgressComponentController.getNumOfMissionsTaken().get() + integer));
                 };
 
-                if(response.isSuccessful()) {
-                    List<DTOMission> missions = new Gson().fromJson(response.body().string(), new TypeToken<List<DTOMission>>() {}.getType());
+                if (response.isSuccessful()) {
+                    List<DTOMission> missions = new Gson().fromJson(response.body().string(), new TypeToken<List<DTOMission>>() {
+                    }.getType());
                     futureList = missions.stream()
                             .map(mission -> executorService.submit(new DecryptionMission(mission, trie.get(), engine.get(), processedString.get(), allyName.get(), agentName.get(), updateCandidatesMetrics, updateMissionsTaken)))
                             .collect(Collectors.toList());
@@ -202,12 +203,12 @@ public class AgentAppController {
     }
 
     @FXML
-    public void checkIfMissionPoolIsEmpty(){
+    public void checkIfMissionPoolIsEmpty() {
         TimerTask timerTask = new TimerTask() {
             @Override
             public void run() {
                 boolean allDone = futureList.stream().allMatch(Future::isDone);
-                if (allDone){
+                if (allDone) {
                     Platform.runLater(() -> {
                         dmProgressComponentController.getNumOfCompletedMissions().set(dmProgressComponentController.getNumOfCompletedMissions().get() + futureList.size());
                         futureList.clear();

@@ -30,6 +30,7 @@ public class Battlefield {
     String processMessage;
     String originalMessage;
     boolean isStarted;
+    DTOCandidate winner;
 
     public Battlefield(String battlefieldName, int allyNumber, BruteForceDifficulty level){
         this.totalAllyNumber = allyNumber;
@@ -38,6 +39,33 @@ public class Battlefield {
         this.allyList = new HashMap<>();
         isStarted = false;
     }
+
+    public boolean checkIfWin(DTOCandidate dtoCandidate){
+        if(!Objects.equals(dtoCandidate.getCandidateString(), originalMessage))
+            return false;
+
+        DTOEnigmaSpecs enigmaSpecs = engine.getSpecs().getCurEnigmaSpecs();
+
+        List<Integer> rotors = enigmaSpecs.getRotors().getRotorsString()
+                .stream()
+                .map(Pair::getKey)
+                .collect(Collectors.toList());
+
+        if(!Objects.equals(enigmaSpecs.getInitialPosition(), dtoCandidate.getInitialPosition()))
+            return false;
+
+        boolean isRotorsEqual = rotors.toString().substring(1, rotors.toString().length() - 1).replaceAll(" ", "")
+                .equals(dtoCandidate.getRotorsPosition());
+
+        if(!isRotorsEqual)
+            return false;
+
+        if(dtoCandidate.getReflector() != enigmaSpecs.getReflector().getReflectorID().value())
+            return false;
+
+        return true;
+    }
+
     public void setEngine(EncryptionMachineEngine engine) throws IOException, ClassNotFoundException {
      EngineCloner cloneEnigma = new EngineCloner();
      this.engine = cloneEnigma.cloneEngine(engine);
@@ -108,5 +136,24 @@ public class Battlefield {
 
     public UBoat getUboat() {
         return uboat;
+    }
+
+    public void setWinner(DTOCandidate winner) {
+        this.winner = winner;
+    }
+
+    public DTOCandidate getWinner() {
+        return winner;
+    }
+
+    public void reset(){
+        processMessage = null;
+        originalMessage = null;
+        isStarted = false;
+        winner = null;
+        engine.resetMachine();
+        //each ally will reset all its agents
+        uboat.reset();
+        allyList.values().forEach(Ally::reset);
     }
 }

@@ -29,7 +29,14 @@ public class GetAllCandidateServlet extends HttpServlet {
             String candidatesListJson = gson.toJson(ally.getCandidateListDelta());
             resp.getWriter().print(candidatesListJson);
         } else if (uBoat != null) {
+            List<DTOCandidate> candidateList = uBoat.getCandidateListDelta();
+            candidateList.stream()
+                    .filter(battlefield::checkIfWin)
+                    .findFirst()
+                    .ifPresent(battlefield::setWinner);
 
+            String candidatesListJson = gson.toJson(candidateList);
+            resp.getWriter().print(candidatesListJson);
         }
-    }        //battlefield.getAllyList().forEach(curAlly -> curAlly.getAgents().forEach(Agent::getCandidatesCreated));
+    }
 }

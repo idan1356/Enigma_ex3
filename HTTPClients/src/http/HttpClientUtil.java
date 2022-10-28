@@ -6,6 +6,10 @@ import java.util.function.Consumer;
 
 public class HttpClientUtil {
     private final static SimpleCookieManager simpleCookieManager = new SimpleCookieManager();
+    public final static int REFRESH_RATE = 500;
+    public final static String WIN_MESSAGE = "Congratulations! you are the winner";
+    public final static String LOSE_MESSAGE_PREFIX = "You lost! the winning ally team is ";
+
     private final static OkHttpClient HTTP_CLIENT =
             new OkHttpClient.Builder()
                     .cookieJar(simpleCookieManager)

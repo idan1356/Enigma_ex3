@@ -22,6 +22,7 @@ public class ContestController {
 
     @FXML TableView<CandidateModel> candidateDetailsComponent;
     @FXML CandidatesDataController candidateDetailsComponentController;
+    @FXML Label Winner;
 
     @FXML
     public void initialize(){
@@ -42,7 +43,6 @@ public class ContestController {
     public void loadDataDecipherState(){
         bruteForceInputComponentController.loadDataDecipherState();
     }
-
     public void cleanUserInputLabels(){
         bruteForceInputComponentController.cleanInputLabels();
     }

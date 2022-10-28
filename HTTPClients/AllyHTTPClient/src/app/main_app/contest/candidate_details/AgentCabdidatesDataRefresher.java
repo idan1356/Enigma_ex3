@@ -11,7 +11,6 @@ import org.jetbrains.annotations.NotNull;
 import java.io.IOException;
 import java.util.List;
 import java.util.TimerTask;
-import java.util.concurrent.CountDownLatch;
 import java.util.function.Consumer;
 
 import static app.utils.AppConstants.BASE_URL;

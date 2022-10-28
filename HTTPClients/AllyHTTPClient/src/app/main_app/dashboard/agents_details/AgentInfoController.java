@@ -16,7 +16,6 @@ import java.util.TimerTask;
 
 import static http.HttpClientUtil.REFRESH_RATE;
 
-import static app.utils.AppUtils.REFRESH_RATE;
 
 public class AgentInfoController implements Closeable {
     @FXML private TableView<AgentInfoModel> agentsDetails;
@@ -57,4 +56,5 @@ public class AgentInfoController implements Closeable {
             timer.cancel();
         }
     }
+
 }

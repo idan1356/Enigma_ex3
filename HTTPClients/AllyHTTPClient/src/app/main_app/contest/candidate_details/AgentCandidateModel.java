@@ -38,4 +38,7 @@ public class AgentCandidateModel {
         return rotors.get();
     }
 
+    public String getAgentName() {
+        return agentName.get();
+    }
 }

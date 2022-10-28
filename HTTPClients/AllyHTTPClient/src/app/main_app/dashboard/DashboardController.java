@@ -77,7 +77,6 @@ public class DashboardController {
         HttpClientUtil.runAsync(url, new Callback() {
             @Override
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
-
             }
 
             @Override
@@ -85,9 +84,7 @@ public class DashboardController {
                 if (response.isSuccessful())
                     Platform.runLater(() -> missionSizeLabel.setText(missionSizeTextField.getText()));
             }
-
         });
-
     }
 
     @FXML
@@ -95,7 +92,6 @@ public class DashboardController {
         HttpClientUtil.runAsync(BASE_URL + "/set_ready", new Callback() {
             @Override
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
-
             }
 
             @Override

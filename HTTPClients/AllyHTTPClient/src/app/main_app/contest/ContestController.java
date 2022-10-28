@@ -12,6 +12,7 @@ import app.main_app.contest.contest_data.ContestDataController;
 import com.google.gson.Gson;
 import http.HttpClientUtil;
 import javafx.application.Platform;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
@@ -41,7 +42,6 @@ public class ContestController {
     @FXML Label numOfFinishedMissions;
     @FXML Label nunOfTotalMissions;
     @FXML Label numOfCreatedMissions;
-
     Timer timer = new Timer();
 
     AllyAppController parentController;

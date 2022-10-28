@@ -40,7 +40,6 @@ public class CabdidatesDataRefresher extends TimerTask {
         if (!shouldUpdate.get()) {
             return;
         }
-
         final int finalRequestNumber = ++requestNumber;
         httpRequestLoggerConsumer.accept("About to invoke: " + " | Users Request # " + finalRequestNumber);
         HttpClientUtil.runAsync(BASE_URL + "/get_all_candidate", new Callback() {

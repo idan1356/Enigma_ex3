@@ -3,6 +3,7 @@ import DTO.DTOContestInfo;
 import app.main_app.AgentAppController;
 import http.HttpClientUtil;
 import com.google.gson.Gson;
+import http.MessagePopUp;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -17,7 +18,7 @@ import java.util.Objects;
 import java.util.Timer;
 import java.util.TimerTask;
 import static app.utils.AppConstants.BASE_URL;
-import static app.utils.AppUtils.REFRESH_RATE;
+import static http.HttpClientUtil.*;
 
 public class ContestAndTeamController {
 

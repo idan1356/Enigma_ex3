@@ -98,8 +98,6 @@ public class UboatAppController {
                         }
                     });
                 }
-
-
                 Platform.runLater(() -> {
                     //update selected file
                     String absolutePath = selectedFile.getAbsolutePath();
@@ -111,6 +109,7 @@ public class UboatAppController {
             }
         });
     }
+
     private void handleFileError(Exception exception){
         Alert errorAlert = new Alert(Alert.AlertType.ERROR);
         errorAlert.setHeaderText("Invalid File");

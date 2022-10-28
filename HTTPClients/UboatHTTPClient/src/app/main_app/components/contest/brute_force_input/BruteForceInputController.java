@@ -170,7 +170,6 @@ public class BruteForceInputController {
                 HttpClientUtil.runAsync(BASE_URL + "/start_competition", new Callback() {
                     @Override
                     public void onFailure(@NotNull Call call, @NotNull IOException e) {
-
                     }
 
                     @Override
