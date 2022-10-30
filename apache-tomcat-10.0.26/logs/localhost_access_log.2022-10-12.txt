@@ -1,4 +1,0 @@
-127.0.0.1 - - [12/Oct/2022:14:25:45 +0300] "GET /EnigmaWebApp_Web_exploded/login?username=idan&usertype=uboat HTTP/1.1" 404 787
-127.0.0.1 - - [12/Oct/2022:14:27:37 +0300] "GET /EnigmaWebApp_Web_exploded/login?username=idan&usertype=uboat HTTP/1.1" 404 787
-0:0:0:0:0:0:0:1 - - [12/Oct/2022:14:28:15 +0300] "GET //EnigmaWebApp_Web_exploded/login?username=idan&usertype=uboat HTTP/1.1" 404 792
-0:0:0:0:0:0:0:1 - - [12/Oct/2022:14:28:25 +0300] "GET //EnigmaWebApp_Web_exploded/login?username=idan&usertype=uboat HTTP/1.1" 404 792
